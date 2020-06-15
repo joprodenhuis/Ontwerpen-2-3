@@ -1,0 +1,317 @@
+/* =============================================================================
+  #RESET
+============================================================================= */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0;margin:0 0 1em}
+
+
+/* =============================================================================
+  #TOOLS
+============================================================================= */
+html { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*, *:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+
+/* =============================================================================
+  #GENERAL
+============================================================================= */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100%;
+  height: 100%;
+
+  font-size: 16px;
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background: #331d1f;
+  min-height: 1500px;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.quote {
+  color: white;
+  font-size: 1.8em;
+}
+
+/* =============================================================================
+  #TYPOGRAPHY
+============================================================================= */
+
+
+/* =============================================================================
+  #LANDING
+============================================================================= */
+#landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#landing:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #331d1f, transparent);
+  z-index: 1000;
+}
+
+#landing img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#title {
+  position: relative;
+  color: #ffffff;
+  font-size: 12em;
+  bottom: 20%;
+  z-index: 300;
+  text-transform: uppercase;
+}
+
+#subtitle {
+  position: relative;
+  color: #ffffff;
+  font-size: 8em;
+  bottom: 20%;
+  margin-top: 40px;
+  z-index: 300;
+}
+
+#front {
+  z-index: 600;
+}
+
+/* =============================================
+  #Scroll down icon
+============================================= */
+.scroll {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 200px;
+  z-index: 800;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 65px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =============================================================================
+  #INTRO
+============================================================================= */
+/*#intro {
+  height: 5vh;
+}*/
+
+/* =============================================================================
+  #TELESCOPE
+============================================================================= */
+#telescope {
+  height: 100vh;
+  background-image: url("../img/VLT.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 80%;
+  padding: 80px 80px;
+}
+
+#telescopetitle {
+  font-size: 7em;
+  color: #ffffff;
+}
+
+#telescopequote1 {
+  width: 700px;
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 600px;
+
+  animation: quote 2.5s ease;
+}
+
+#telescopequote2 {
+  width: 700px;
+  position: absolute;
+  margin-top: 500px;
+  margin-left: 400px;
+}
+
+@keyframes quote {
+  0% {transform: scale(0);}
+  100% {transform: scale(1.0);}
+}
+
+/* =============================================================================
+  #TRANSIT
+============================================================================= */
+#transit {
+  height: 100vh;
+  background-color: #000000;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;*/
+}
+
+#transittitle {
+  font-size: 7em;
+  color: #ffffff;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 80px;
+}
+
+#container {
+  position: absolute;
+  margin-left: -45px;
+  margin-top: -36px;
+}
+
+#transitquote1 {
+  width: 700px;
+  position: absolute;
+  margin-left: 80px;
+  margin-top: 180px;
+  z-index: 10000;
+  opacity: 0;
+}
+
+#transitquote1:hover {
+  opacity: 1;
+  transition: 3s ease;
+}
+
+#transitquote2 {
+  width: 600px;
+  position: absolute;
+  margin-left: 720px;
+  margin-top: 660px;
+}
+
+
+/* =============================================================================
+  #RADIOGRAFIE
+============================================================================= */
+#radiografie {
+  height: 100vh;
+  background-image: url("../img/planet.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
