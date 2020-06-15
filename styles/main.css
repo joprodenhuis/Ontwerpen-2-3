@@ -56,8 +56,15 @@ section {
 /* =============================================================================
   #TYPOGRAPHY
 ============================================================================= */
+@font-face {
+  font-family: Chango;
+  src: url(../fonts/Chango-Regular.ttf);
+}
 
-
+@font-face {
+  font-family: Bungee;
+  src: url(../fonts/BungeeShade-Regular.ttf);
+}
 /* =============================================================================
   #LANDING
 ============================================================================= */
@@ -95,8 +102,7 @@ section {
 #title {
   position: relative;
   color: #ffffff;
-  font-size: 12em;
-  bottom: 20%;
+  font-size: 13em;
   z-index: 300;
   text-transform: uppercase;
 }
@@ -105,7 +111,7 @@ section {
   position: relative;
   color: #ffffff;
   font-size: 8em;
-  bottom: 20%;
+  margin-bottom: 250px;
   margin-top: 40px;
   z-index: 300;
 }
@@ -121,7 +127,7 @@ section {
   position: relative;
   width: 24px;
   height: 24px;
-  top: 200px;
+  top: 80px;
   z-index: 800;
 }
 
@@ -222,14 +228,17 @@ section {
 }
 
 #telescopetitle {
-  font-size: 7em;
+  font-family: "Chango", "Helvetica", Arial, sans-serif;
+  font-size: 9em;
+
+  width: 1000px;
   color: #ffffff;
 }
 
 #telescopequote1 {
   width: 700px;
   position: absolute;
-  margin-top: 350px;
+  margin-top: 270px;
   margin-left: 600px;
 
   animation: quote 2.5s ease;
@@ -238,7 +247,7 @@ section {
 #telescopequote2 {
   width: 700px;
   position: absolute;
-  margin-top: 500px;
+  margin-top: 420px;
   margin-left: 400px;
 }
 
@@ -253,6 +262,10 @@ section {
 #transit {
   height: 100vh;
   background-color: #000000;
+  background-image: url("../img/cosmos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-position: 20% 0;
   /*display: flex;
   justify-content: center;
   align-items: center;
@@ -260,6 +273,7 @@ section {
 }
 
 #transittitle {
+  font-family: "Bungee", "Helvetica", Arial, sans-serif;
   font-size: 7em;
   color: #ffffff;
   position: absolute;
@@ -277,7 +291,7 @@ section {
   width: 700px;
   position: absolute;
   margin-left: 80px;
-  margin-top: 180px;
+  margin-top: 200px;
   z-index: 10000;
   opacity: 0;
 }
