@@ -4,6 +4,7 @@
 	<meta charset="utf-8" lang="nl">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="icon" type="image/gif" href="img/fav-icon.png">
 	<title>Tweelingplaneet</title>
 </head>
@@ -26,27 +27,45 @@
 		<!-- <section id="intro">
 		</section> -->
 		<section id="telescope">
-			<h2 id="telescopetitle">The Very Large Telescope</h2>
-			<p class="quote" id="telescopequote1">“Op een berg in de Chileense Atacamawoestijn staat een groep verlaten sterrenkijkers. Het zijn de koepels van de Very Large Telescope, de grootste telescoop op aarde. De nachtelijke hemel boven hen is helderder dan waar ook ter wereld, overal fonkelend licht, maar deze sterrenkijkers zien al wekenlang niets.”</p>
-			<p class="quote" id="telescopequote2">“De pandemie gaat ook aan dit afgelegen gebied niet voorbij. Er is geen personeel meer om de telescoop te bemannen. De gigantische spiegelkijkers die normaal het heelal in turen zitten opgeborgen in de koepels. Onze ogen naar het universum zijn gesloten. “</p>
+			<h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="false" id="telescopetitle">The Very Large Telescope</h2>
+			<p data-aos="zoom-in" class="quote" id="telescopequote1"><span>“ </span>Op een berg in de Chileense Atacamawoestijn staat een groep verlaten sterrenkijkers. Het zijn de koepels van de Very Large Telescope, de grootste telescoop op aarde. De nachtelijke hemel boven hen is helderder dan waar ook ter wereld, overal fonkelend licht, maar deze sterrenkijkers zien al wekenlang niets.<span> ”</span></p>
+			<p data-aos="zoom-in" class="quote" id="telescopequote2"><span>” </span>De pandemie gaat ook aan dit afgelegen gebied niet voorbij. Er is geen personeel meer om de telescoop te bemannen. De gigantische spiegelkijkers die normaal het heelal in turen zitten opgeborgen in de koepels. Onze ogen naar het universum zijn gesloten.<span> ”</span></p>
 		</section>
 		<section id="transit">
-			<h2 id="transittitle">Transitmethode</h2>
-			<p class="quote" id="transitquote1">“De transitmethode is de meest succesvolle, en ook de meest poëtische. Als exoplaneten voorbij ‘hun’ ster komen, veroorzaakt dat een dip in de straling van die ster. Het is een nauwelijks waarneembare onregelmatigheid, een lichtverlies van rond de 1 procent en meestal zelfs minder.”</p>
-			<p class="quote" id="transitquote2">“Een planeet groter dan de aarde is op lichtjaren afstand niet meer dan een ritmische lichtdip, een kosmische knipoog, de kleinst mogelijke schaduw rond een razende zon.”</p>
+			<h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="false" id="transittitle">Transitmethode</h2>
+			<p class="quote" id="transitquote1"><span>“ </span>De transitmethode is de meest succesvolle, en ook de meest poëtische. Als exoplaneten voorbij ‘hun’ ster komen, veroorzaakt dat een dip in de straling van die ster. Het is een nauwelijks waarneembare onregelmatigheid, een lichtverlies van rond de 1 procent en meestal zelfs minder.<span> ”</span></p>
+			<p class="quote" id="transitquote2"><span>” </span>Een planeet groter dan de aarde is op lichtjaren afstand niet meer dan een ritmische lichtdip, een kosmische knipoog, de kleinst mogelijke schaduw rond een razende zon.<span> ”</span></p>
 			<div id='container'></div>
 		</section>
 		<section id="radiografie">
 			<audio controls>
-  				<source src="img/space.ogg" type="audio/ogg">
-  				<source src="img/space.mp3" type="audio/mpeg">
+  				<source src="img/space.ogg" type="audio/ogg" class=".audioplayer">
+  				<source src="img/space.mp3" type="audio/mpeg" id="spaceAudio" class=".audioplayer">
 			Your browser does not support the audio element.
 			</audio>
 		</section>
 		<section id="article">
-			
+			<div class="gradient"></div>
+			<img src="img/marjolijn.png" id="marjolijn">
+			<img src="img/nametag.png" id="nametag">
+			<p id="description">Lees het hele artikel van Marjolijn van Heemstra over het onderzoek naar de tweelingplaneet op <a href="https://decorrespondent.nl/11222/van-atacama-tot-dwingeloo-zoeken-sterrenkundigen-naar-een-tweede-aarde/19548457690718-85cd8525" target="_blank" class="link"> de correspondent</a>.</p>
 		</section>
 	</main>
+	<script 
+		src="https://code.jquery.com/jquery-1.12.4.min.js" 
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous">
+	</script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  	<script>
+  		 AOS.init({
+        	startEvent: 'DOMContentLoaded',
+        	delay: 600,
+        	duration: 2000, 
+        	easing: 'ease-in-out', 
+        	once: false, 
+      	});
+  	</script>
 	<script src="scripts/main.js"></script>
 </body>
 </html>

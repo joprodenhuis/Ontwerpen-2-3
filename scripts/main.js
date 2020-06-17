@@ -5,6 +5,7 @@ let bg = document.getElementById("bg");
 let mid = document.getElementById("mid");
 let front = document.getElementById("front");
 let title = document.getElementById("title");
+let subtitle = document.getElementById("subtitle");
 
 window.addEventListener('scroll', function(){
 	var value = window.scrollY;
@@ -12,7 +13,8 @@ window.addEventListener('scroll', function(){
 	bg.style.top = value * 0.5 + 'px';
 	mid.style.top = value * 0.15 + 'px';
 	front.style.top = value * 0.13 + 'px';
-	title.style.top = value * 1 + 'px';
+	title.style.top = value * 0.18 + '%';
+	subtitle.style.top = value * 0.18 + '%';
 });
 
 
@@ -149,3 +151,9 @@ step();
 //===================================================
 // Audio visualization
 //===================================================
+
+
+
+
+
+

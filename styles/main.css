@@ -48,9 +48,21 @@ section {
   scroll-snap-align: start;
 }
 
+p {
+  font-family: arial;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  line-height: 25px;
+}
+
 .quote {
   color: white;
   font-size: 1.8em;
+}
+
+span {
+  font-size: 30px;
+  font-style: italic;
 }
 
 /* =============================================================================
@@ -65,6 +77,18 @@ section {
   font-family: Bungee;
   src: url(../fonts/BungeeShade-Regular.ttf);
 }
+
+@font-face {
+  font-family: BrunoAce;
+  src: url(../fonts/BrunoAce-Regular.ttf);
+}
+
+@font-face {
+  font-family: BlackOps;
+  src: url(../fonts/BlackOpsOne-Regular.ttf);
+}
+
+
 /* =============================================================================
   #LANDING
 ============================================================================= */
@@ -100,6 +124,7 @@ section {
 }
 
 #title {
+  font-family: "BlackOps", "Helvetica", Arial, sans-serif;
   position: relative;
   color: #ffffff;
   font-size: 13em;
@@ -108,9 +133,10 @@ section {
 }
 
 #subtitle {
+  font-family: "BrunoAce", "Helvetica", Arial, sans-serif;
   position: relative;
   color: #ffffff;
-  font-size: 8em;
+  font-size: 6em;
   margin-bottom: 250px;
   margin-top: 40px;
   z-index: 300;
@@ -230,30 +256,23 @@ section {
 #telescopetitle {
   font-family: "Chango", "Helvetica", Arial, sans-serif;
   font-size: 9em;
+  color: #ebddd4;
 
   width: 1000px;
-  color: #ffffff;
 }
 
 #telescopequote1 {
   width: 700px;
   position: absolute;
-  margin-top: 270px;
+  margin-top: 250px;
   margin-left: 600px;
-
-  animation: quote 2.5s ease;
 }
 
 #telescopequote2 {
   width: 700px;
   position: absolute;
-  margin-top: 420px;
+  margin-top: 400px;
   margin-left: 400px;
-}
-
-@keyframes quote {
-  0% {transform: scale(0);}
-  100% {transform: scale(1.0);}
 }
 
 /* =============================================================================
@@ -266,16 +285,12 @@ section {
   background-size: cover;
   background-position: center;
   background-position: 20% 0;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column-reverse;*/
 }
 
 #transittitle {
   font-family: "Bungee", "Helvetica", Arial, sans-serif;
   font-size: 7em;
-  color: #ffffff;
+  color: #9e2b19;
   position: absolute;
   margin-left: 80px;
   margin-top: 80px;
@@ -289,6 +304,7 @@ section {
 
 #transitquote1 {
   width: 700px;
+  color: #e8725f;
   position: absolute;
   margin-left: 80px;
   margin-top: 200px;
@@ -298,14 +314,22 @@ section {
 
 #transitquote1:hover {
   opacity: 1;
-  transition: 3s ease;
+  transition: 2.5s ease;
 }
 
 #transitquote2 {
+  color: #e8725f;
   width: 600px;
   position: absolute;
   margin-left: 720px;
   margin-top: 660px;
+  z-index: 10000;
+  opacity: 0;
+}
+
+#transitquote2:hover {
+  opacity: 1;
+  transition: 2.5s ease;
 }
 
 
@@ -314,7 +338,7 @@ section {
 ============================================================================= */
 #radiografie {
   height: 100vh;
-  background-image: url("../img/planet.jpg");
+  background-image: url("../img/planet.gif");
   background-size: cover;
   background-position: center;
 
@@ -322,6 +346,67 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+#sillhouette {
+  width: 100%;
+  margin-top: 278px;
+}
+
+audio {
+  width: 500px;
+}
+
+/* =============================================================================
+  #ARTICLE
+============================================================================= */
+#article {
+  height: 50vh;
+  background-color: #E5E4E6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient {
+  content: '';
+  position: absolute;
+  margin-top: -190px;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, #000000, #E5E4E6);
+  z-index: 1000;
+}
+
+#marjolijn {
+  height: 280px;
+  margin-top: -10px;
+  position: absolute;
+  z-index: 1300;
+}
+
+#nametag {
+  position: absolute;
+  height: 35px;
+  width: 280px;
+  margin-top: 60px;
+  z-index: 1400;
+}
+
+#description {
+  font-family: Georgia;
+  text-align: center;
+  width: 600px;
+  position: absolute;
+  margin-top: 140px;
+  color: #000000;
+  z-index: 1400;
+}
+
+.link:hover {
+  color: #05014d;
+}
+
 
 
 
